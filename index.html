@@ -13,7 +13,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size:x-large;
       }
-      .logo {
+      #logo {
         width: 70px;
         height: 70px;
         background-image: linear-gradient(
@@ -34,24 +34,25 @@
         justify-content: left;
       }
 
-      ul {
+      nav ul {
         margin-top: 20px;
         margin-left: 20px;
         width: 80%;
         display: flex;
         justify-content: left;
       }
-      li {
+      nav ul li {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 15px;
       }
-      a {
+      nav ul li a {
         text-decoration: none;
-        color: gray;
+        color: rgba(78, 70, 70, 0.758);
+        padding: 20px;
       }
-      a:hover {
+      nav ul li a:hover {
         color: red;
       }
       #background{
@@ -85,7 +86,7 @@
   </head>
   <body>
     <nav id="nav">
-      <div class="logo">R</div>
+      <div id="logo">R</div>
       <ul>
         <li><a href="#home"> Home</a></li>
         <li><a href="#">Project</a></li>
@@ -102,14 +103,14 @@
     <a href="#"><div id="btn">Buy Rogan&#x2192</div></a>
     <footer>
       <h1 id="name"></h1>
-      <h1 id="uro"></h1>
-      <h1 id="col"></h1>
+      <h1 id="roll"></h1>
+      <h1 id="clg"></h1>
       <h1 id="date"></h1>
     </footer>
     <script>
       document.getElementById("name").textContent = "Divyanshi Varshney";
-      document.getElementById("uro").textContent = "201500233";
-      document.getElementById("col").textContent = "GLA University, Mathura";
+      document.getElementById("roll").textContent = "201500233";
+      document.getElementById("clg").textContent = "GLA University, Mathura";
       window.onload = date;
       function date() {
         var d = new Date().toLocaleDateString();
