@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Coding Challenge</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+      }
+      .logo {
+        width: 70px;
+        height: 70px;
+        background-image: linear-gradient(
+          to top left,
+          rgb(210, 82, 103),
+          red
+        );
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+      }
+      nav {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: left;
+      }
+
+      ul {
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 80%;
+        display: flex;
+        justify-content: left;
+      }
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+      a:hover {
+        color: red;
+      }
+      #background{
+        height: 80vh;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      footer {
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #btn {
+        width: 150px;
+        position: fixed;
+        top: 10px;
+        right: 0px;
+        color: red;
+        padding: 10px;
+        box-shadow: 1px 1px 3px gray;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="logo">R</div>
+      <ul>
+        <li><a href="#home"> Home</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Elements</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main id="background">
+      <img src="./image/Screenshot (12).png" alt="banner" />
+    </main>
+    <a href="#"><div id="btn">Buy Rogan --></div></a>
+    <footer>
+      <h1 id="name"></h1>
+      <h1 id="uro"></h1>
+      <h1 id="col"></h1>
+      <h1 id="date"></h1>
+    </footer>
+    <script>
+      document.getElementById("name").textContent = "Divyanshi Varshney";
+      document.getElementById("uro").textContent = "201500233";
+      document.getElementById("col").textContent = "GLA University, Mathura";
+      window.onload = date;
+      function date() {
+        var d = new Date().toLocaleDateString();
+        var l = d.split("/");
+        var day = l[1],
+          month = l[0],
+          year = l[2];
+        var date = day + "-" + month + "-" + year;
+        document.getElementById("date").textContent = `${date}`;
+      }
+    </script>
+  </body>
+</html>
