@@ -115,8 +115,8 @@
       function date() {
         var d = new Date().toLocaleDateString();
         var l = d.split("/");
-        var day = l[1],
-          month = l[0],
+        var day = l[0],
+          month = l[1],
           year = l[2];
         var date = day + "-" + month + "-" + year;
         document.getElementById("date").textContent = `${date}`;
